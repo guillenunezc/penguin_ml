@@ -9,13 +9,21 @@ from sklearn.metrics import accuracy_score
 
 st.title("Clasificador de Pinguinos")
 st.write(
-    "Esta app utiliza 6 inputs para predecir la especie del pinguino usando un modelo de ML construido del dataset de Palmer Penguins.\
-        Usa el formulario de abajo para saber a que especie pertenece el pinguino."
+    "Esta app te ayuda a descubrir a qué especie pertenece un pingüino basándose en 6 características simples que proporcionas."
 )
+
 st.write(
-    "En esta version el modelo se entrena en la app. El usuario carga sus datos, el script realiza las tareas de preprocesamiento, \
-    crea el modelo y luego hace las predicciones en base a los inputs que el usuario ingrese."
+    "Funciona de manera sencilla: introduces los datos del pingüino, y la app utilizará un modelo de ML pre-entrenado para predecir su especie. \
+ Todo el proceso, desde el análisis hasta la predicción, se realiza dentro de la app, sin necesidad de conocimientos previos en el tema."
 )
+
+st.markdown("**¿Quieres entrenar tu propio modelo de ML?** :sparkles: 	:muscle:")
+
+st.write(
+    "En esta version se incluye la opción de cargar tu propio dataset y asi entrenar tu propio modelo de Machine Learning."
+)
+
+st.write("*Pd: Si no subes ningún dataset, la app utilizará un modelo pre-entrenado.*")
 
 # El usuario sube su propio dataset para entrenar su modelo con esos datos,
 # Si no sube un archivo, se utilizará un modelo ya entrenado con RandomForest.
