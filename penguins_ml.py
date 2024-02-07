@@ -25,6 +25,11 @@ st.write(
 
 st.write("*Pd: Si no subes ningún dataset, la app utilizará un modelo pre-entrenado.*")
 
+password_guess = st.text_input("Ingresa el password")
+
+if password_guess != st.secrets["password"]:
+    st.stop()
+
 # El usuario sube su propio dataset para entrenar su modelo con esos datos,
 # Si no sube un archivo, se utilizará un modelo ya entrenado con RandomForest.
 penguin_file = st.file_uploader("Sube tu propio dataset de pinguinos")
